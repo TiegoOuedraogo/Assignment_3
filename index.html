@@ -21,33 +21,37 @@
     </section>
     <div class="footer"></div>
     <script>
-      //Select the section with an id of container without using querySelector.
-      let withoutQuery = document.getElementById("container");
-      //Select the section with an id of container using querySelector.
-      let usingQuery = document.querySelector("container");
-      //Select all of the list items with a class of "second".
-      let nameSecond = document.querySelectorAll("second");
+            //Select the section with an id of container without using querySelector.
+            let withoutQuery = document.getElementById("container");
+            //Select the section with an id of container using querySelector.
+            let usingQuery = document.querySelector("container");
+            //Select all of the list items with a class of "second".
+            let nameSecond = document.querySelectorAll("second");
 
-      //Select a list item with a class of third, but only the list item inside of the ol tag.
-      //let selectOlTag = document.getElementsByClassName("third");
-      let selectItemOlTag = document
-        .querySelector("ol")
-        .getElementsByClassName("third");
-      //Give the section with an id of container the text "Hello!".
-      usingQuery = document.getElementById("container").innerHTML += "Hello";
+            //Select a list item with a class of third, but only the list item inside of the ol tag.
+            //let selectOlTag = document.getElementsByClassName("third");
+            let selectItemOlTag = document
+              .querySelector("ol")
+              .getElementsByClassName("third");
+            //Give the section with an id of container the text "Hello!".
+            usingQuery = document.getElementById("container").innerHTML += "Hello";
 
-      //Add the class main to the div with a class of footer.
-      document.getElementsByClassName("footer")[0].classList.add("main");
+            //Add the class main to the div with a class of footer.
+            document.getElementsByClassName("footer")[0].classList.add("main");
 
-      //Remove the class main on the div with a class of footer.
-      document.getElementsByClassName("footer")[0].classList.remove("main");
-      //appending
-      //createElement("Four").appendChild( document.querySelector("ul") );
-      //  var ul = document.getElementById("list");
-      //   var li = document.createElement("li");
-      //   var children = ul.children.length + 1
-      //   li.appendChild(document.createTextNode("Element "+children));
-      //   ul.appendChild(li)
+            //Remove the class main on the div with a class of footer.
+            document.getElementsByClassName("footer")[0].classList.remove("main");
+            //appending
+            var li = document.createElement("li");
+            var ul = document.getElementById("container").getElementsByTagName("ul")[0]
+            ul.appendChild(li);
+            li.append("four")
+            document.getElementById("container").getElementsByTagName("ol")[0].style.backgroundColor = "red";
+
+            document.getElementsByClassName("footer")[0].classList.remove("footer");
+
+
+         
     </script>
   </body>
 </html>
